@@ -2,14 +2,22 @@
 layout: page
 title: Contact
 permalink: /contact
-date: 2018-08-26
+date: 2018-08-27
 ---
 
-There are several ways to contact _The Markup Declaration_.
+To join in the conversation,
+[subscribe](http://www.mulberrytech.com/markupdeclaration.html)
+to the mailing list:
 
-1. Email us at [info@markupdeclaration.org](mailto:info@markupdelaration.org).
-2. “@” us on [Twitter](https://twitter.com/markupdec)
-3. If you want to propose changes to these pages or suggest
-   other activities, create issues or make pull requests
-   on [GitHub](https://github.com/markupdeclaration/).
+```
+MarkupDeclaration@lists.mulberrytech.com
+```
+
+To contact an individual about the contents of this website or one
+of our social media accounts,
+email us at [info@markupdeclaration.org](mailto:info@markupdelaration.org),
+“@” us on [Twitter](https://twitter.com/markupdec), or,
+if you want to propose changes to these pages or suggest other
+activities, create issues or make pull requests on
+[GitHub](https://github.com/markupdeclaration/).
 
