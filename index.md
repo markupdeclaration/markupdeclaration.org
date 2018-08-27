@@ -3,7 +3,7 @@ layout: main
 date: 2018-08-26
 ---
 
-_Markup Declaration_ is a movement for revitalizing and
+_Markup Declaration_ is a movement for explaining and
 formalizing our understanding of declarative markup.
 
 Declarative markup is the practice of identifying what information in
