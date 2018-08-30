@@ -22,7 +22,7 @@ visual and accessible presentations; to use the same documents in many
 different applications for different vendors; and to lengthen the time
 in which the documents are likely to be useable.
 
-The time is ripe now to explain declarative markup: for a few years now, 
+The time is ripe to explain declarative markup: for a few years, 
 non-declarative technologies have been developed and over-promised and their 
 limits have started to show.
 
@@ -31,10 +31,11 @@ vocabularies do not need to be declarative and declarative markup does
 not need to be in XML. The web is full of voices that champion clean, 
 readable HTML documents styled with CSS. XML is a technology used by millions. 
 The academic fields of Digital Humanities and Corpus Linguistics, as well as 
-companies from publishing houses, manufacturers, insurance firms, healthcare 
-providers, legal departments, ecommerce or the governmental institutions 
-requiring open data policies or the long term preservation of information, 
-have as much need as ever for declarative markup.
+organizations including publishing houses, manufacturers, insurance firms, 
+healthcare providers, legal departments, ecommerce and government 
+departments - any institutions, indeed, requiring the reuse, 
+long term preservation of information or have open data 
+policies - have as much need as ever for declarative markup.
 
 We need a central space in which to discuss, work on, and work with
 these technologies.
