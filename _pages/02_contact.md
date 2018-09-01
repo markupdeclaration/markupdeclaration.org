@@ -15,7 +15,7 @@ MarkupDeclaration@lists.mulberrytech.com
 
 To contact an individual about the contents of this website or one
 of our social media accounts,
-email us at [info@markupdeclaration.org](mailto:info@markupdelaration.org),
+email us at [info@markupdeclaration.org](mailto:info@markupdeclaration.org),
 “@” us on [Twitter](https://twitter.com/markupdec), or,
 if you want to propose changes to these pages or suggest other
 activities, create issues or make pull requests on
