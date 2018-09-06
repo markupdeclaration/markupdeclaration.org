@@ -6,7 +6,7 @@ date: 2018-08-27
 ---
 
 To join in the conversation,
-[subscribe](http://www.mulberrytech.com/markupdeclaration.html)
+[subscribe](https://www.mulberrytech.com/markupdeclaration.html)
 to the mailing list:
 
 ```

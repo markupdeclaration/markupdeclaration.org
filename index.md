@@ -50,5 +50,5 @@ Without you, there’s no community; without community, there’s no
 Markup Declaration.
 
 If you’re interested in finding out more, [contact us](/contact),
-or [join in the conversation](http://www.mulberrytech.com/markupdeclaration.html)!
+or [join in the conversation](https://www.mulberrytech.com/markupdeclaration.html)!
 
