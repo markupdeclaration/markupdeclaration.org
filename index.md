@@ -26,16 +26,17 @@ The time is ripe to explain declarative markup: for a few years,
 non-declarative technologies have been developed and over-promised and their 
 limits have started to show.
 
-While documents with declarative markup are often encoded in XML, XML 
-vocabularies do not need to be declarative and declarative markup does 
-not need to be in XML. The web is full of voices that champion clean, 
-readable HTML documents styled with CSS. XML is a technology used by millions. 
-The academic fields of Digital Humanities and Corpus Linguistics, as well as 
-organizations including publishing houses, manufacturers, insurance firms, 
-healthcare providers, legal departments, ecommerce and government 
-departments - any institutions, indeed, requiring the reuse, 
-long term preservation of information or have open data 
-policies - have as much need as ever for declarative markup.
+While documents with declarative markup are often encoded in XML,
+XML vocabularies do not need to be declarative and declarative
+markup does not need to be in XML. The web is full of voices that
+champion clean, readable HTML documents styled with CSS. XML is a
+technology used by millions. Organizations, including publishing
+houses, manufacturers, insurance firms, healthcare providers,
+legal departments, ecommerce and government departments, as well
+as the academic fields of Digital Humanities and Corpus
+Linguistics – indeed, all areas requiring the reuse or long term
+preservation of information or that have open data policies –
+have as much need as ever for declarative markup.
 
 We need a central space in which to discuss, work on, and work with
 these technologies.
@@ -49,8 +50,8 @@ community-generated best-practice document for markup practitioners.
 Your contribution is central to realising this vision. Whether you’re
 a markup veteran, or just starting to find out what markup has to
 offer you, we know that you have a lot to offer markup. We need
-philosophers, coders, writers, instructors, speakers, and - most of
-all - people who are willing to share their thoughts, ideas, and
+philosophers, coders, writers, instructors, speakers, and – most of
+all – people who are willing to share their thoughts, ideas, and
 experiences.
 
 Without you, there’s no community; without community, there’s no
