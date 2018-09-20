@@ -16,6 +16,7 @@
 
 header img {
     max-height: 48px;
+    max-width: 48px;
 }
 
 header a,
@@ -52,45 +53,3 @@ ul {
         width: 100%;
     }
 }
-
-/*
-article {
-    margin: auto;
-    max-width: 34em;
-}
-
-.header {
-    padding-top: 1rem;
-    text-align: center;
-}
-
-.header h1 {
-    padding-top: 0;
-    margin-top: 1rem;
-    font-size: 24pt;
-    color: #312783;
-}
-
-.header img {
-    width: 300px;
-}
-
-a,
-a:visited,
-a:link {
-    text-decoration: underscore;
-    color: #312783;
-}
-
-footer {
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #312783;
-    margin: auto;
-    max-width: 34em;
-}
-footer div {
-    font-size: small;
-    float: right;
-}
-*/
