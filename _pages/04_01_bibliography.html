@@ -98,7 +98,15 @@ date: 2018-09-18
     </style>
 </head>
 <body>
-  <p>This list of works about declarative markup is, as all such lists
+  <p>This list<label for="mn-contribute"
+  class="margin-toggle">⊕</label>
+  <input type="checkbox" id="mn-contribute" class="margin-toggle"/>
+    <span class="marginnote">Do you know of a declarative markup resource
+    that’s missing from this list? Do you have an annotation to add?
+    The bibliography is a community effort,
+    please contribute!
+    Details <a href="#contribute">below</a>.</span>
+ list of works about declarative markup is, as all such lists
   must be, incomplete and based on the opinions of the contributors.
   The intent is to make available the widely scattered literature on
   the philosophy of markup that has been variously called “generic
@@ -126,6 +134,7 @@ date: 2018-09-18
       <li><a href="#declmarkup">About Declarative Markup <i>per se</i></a></li>
       <li><a href="#markupuses">Declarative Markup Uses</a></li>
       <li><a href="#related">Related Concepts</a></li>
+      <li><a href="#contribute">How to contribute</a></li>
     </ul>
   </aside>
 
@@ -575,6 +584,47 @@ date: 2018-09-18
   <section id="related">
     <h1>Related Concepts</h1>
     <p>This section is empty at this time.</p>
+  </section>
+
+  <section id="contribute">
+    <h1>How to Contribute</h1>
+    <p><cite>Markup Declaration</cite> wants your input!</p>
+    <p>If you know of a resource that’s missing from this bibliography,
+    or if you have an annotation to add, please contribute!</p>
+
+    <p>For each entry, we need the title of the work, the names of the
+    author or authors, and an annotation. If the annotation is an excerpt
+    from the work, that’s all you have to say. If it’s a personal comment
+    on the work, please include your name as you’d like it to be published.
+    (You can see how we’ll format that and put it on the page by looking
+    at the examples above.)
+    </p>
+
+    <p>There are three options for contributing:</p>
+
+    <ol>
+      <li>
+        <p>If you want, you can just <a href="/contact">send it to us</a>.
+        We’re all about lowering the barriers of entry!</p>
+      </li>
+      <li>
+        <p>A little more work for you, but a little easier for us, would
+        be to
+        <a href="https://github.com/markupdeclaration/markupdeclaration.org/issues=">create an issue</a> that contains the details needed for the bibliography.
+        </p>
+      </li>
+      <li>
+        <p>Finally, if you’re comfortable with GitHub and HTML, feel free to fork
+        <a href="https://github.com/markupdeclaration/markupdeclaration.org">the
+        repository</a>, edit <code>_pages/04_01_bibliography.html</code>,
+        and send us a pull request</p>
+        <p>The markup is a little bit odd, we concede, because some of the
+        publishing mechanics (<a href="https://jekyllrb.com/">Jekyll</a>)
+        bleed through into the content. We may try to fix that in the
+        future. For now, just leave the extra few lines of text at the
+        top of the file alone.</p>
+      </li>
+    </ol>
   </section>
 
 </body>
