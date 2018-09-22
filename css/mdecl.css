@@ -36,6 +36,15 @@ ul {
     width: 55%;
 }
 
+li p {
+    width: 100%;
+}
+
+li p:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 @media (max-width: 760px) {
     #mainlogo {
         display: none;
