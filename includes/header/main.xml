@@ -1,0 +1,4 @@
+<header xmlns="http://www.w3.org/1999/xhtml">
+  <img src="img/logo.png" alt="[Logo]" id="mainlogo"/>
+  <h1><img src="img/logo-small.png" alt="[Logo]" id="smlogo"/>Markup Declaration</h1>
+</header>
