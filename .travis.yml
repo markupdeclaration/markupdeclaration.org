@@ -1,0 +1,7 @@
+dist: trusty
+language: java
+install: true
+script: ./gradlew
+
+after_success:
+  - tools/publish.sh

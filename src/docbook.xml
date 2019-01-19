@@ -1,0 +1,12 @@
+<article xmlns="http://docbook.org/ns/docbook">
+<info>
+<title>DocBook Sample</title>
+</info>
+<para>This is a sample DocBook document. It’s published
+on the website, but it isn’t actually integrated into
+the navigation. It’s just a test.
+</para>
+<para>If you found this by accident, congratulations.
+I guess.</para>
+</article>
+
