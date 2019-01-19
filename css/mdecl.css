@@ -1,0 +1,78 @@
+body {
+    background: #ffffff;
+}
+
+#mainlogo {
+    position: absolute;
+    top: 4rem;
+    left: 65%;
+    max-width: 25%;
+    max-height: 100%;
+}
+
+#smlogo {
+    display: none;
+}
+
+#homepage {
+    padding-top: 0;
+}
+
+header img {
+    max-height: 48px;
+    max-width: 48px;
+}
+
+header a,
+header a:link,
+header a:visited {
+    text-decoration: none;
+    background: inherit;
+    color: inherit;
+}
+
+article {
+    padding-top: 1rem;
+}
+
+ol,
+ul {
+    width: 55%;
+}
+
+li p {
+    width: 100%;
+}
+
+li p:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+@media (max-width: 760px) {
+    #mainlogo {
+        display: none;
+    }
+
+    #smlogo {
+        display: inline-block;
+        max-height: 1em;
+        max-width: 1em;
+        padding-right: 0.25rem;
+    }
+
+    ol,
+    ul {
+        width: 100%;
+    }
+}
+
+a:link { text-decoration: none;
+         background: -webkit-linear-gradient(#ffffff, #ffffff), -webkit-linear-gradient(#ffffff, #ffffff), -webkit-linear-gradient(#333, #333);
+         background: linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff), linear-gradient(#333, #333);
+         -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-repeat: no-repeat, no-repeat, repeat-x;
+         text-shadow: 0.03em 0 #ffffff, -0.03em 0 #ffffff, 0 0.03em #ffffff, 0 -0.03em #ffffff, 0.06em 0 #ffffff, -0.06em 0 #ffffff, 0.09em 0 #ffffff, -0.09em 0 #ffffff, 0.12em 0 #ffffff, -0.12em 0 #ffffff, 0.15em 0 #ffffff, -0.15em 0 #ffffff;
+         background-position: 0% 93%, 100% 93%, 0% 93%; }
