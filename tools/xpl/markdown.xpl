@@ -12,6 +12,8 @@
   <p:option name="markdown" required="true"/>
   <p:option name="id"/>
 
+  <p:import href="pubdate.xpl"/>
+
   <p:declare-step type="cx:commonmark">
     <p:output port="result"/>
     <p:option name="href" required="true"/>
@@ -21,11 +23,14 @@
     <p:with-option name="href" select="$markdown"/>
   </cx:commonmark>
 
-  <p:identity name="pubmeta">
-    <p:input port="source" select="(//h:pubmeta)[1]">
+  <p:insert name="pubmeta" match="/h:doc" position="first-child">
+    <p:input port="source">
+      <p:inline><h:doc/></p:inline>
+    </p:input>
+    <p:input port="insertion" select="(//h:pubmeta)[1]">
       <p:pipe step="markdown" port="result"/>
     </p:input>
-  </p:identity>
+  </p:insert>
 
   <p:delete name="content" match="//h:pubmeta">
     <p:input port="source">
@@ -42,14 +47,14 @@
   </p:identity>
 
   <p:choose name="head-include">
-    <p:when test="/h:pubmeta/h:head">
+    <p:when test="/h:doc/h:pubmeta/h:head">
       <p:xpath-context>
         <p:pipe step="pubmeta" port="result"/>
       </p:xpath-context>
       <p:output port="result"/>
       <p:load>
         <p:with-option name="href"
-                       select="concat('../../includes/head/', /h:pubmeta/h:head, '.xml')">
+                       select="concat('../../includes/head/', /h:doc/h:pubmeta/h:head, '.xml')">
           <p:pipe step="pubmeta" port="result"/>
         </p:with-option>
       </p:load>
@@ -61,13 +66,13 @@
   </p:choose>
 
   <p:choose name="head">
-    <p:when test="/h:pubmeta/h:title">
+    <p:when test="/h:doc/h:pubmeta/h:title">
       <p:xpath-context>
         <p:pipe step="pubmeta" port="result"/>
       </p:xpath-context>
       <p:output port="result"/>
       <p:insert match="/h:head" position="last-child">
-        <p:input port="insertion" select="/h:pubmeta/h:title">
+        <p:input port="insertion" select="/h:doc/h:pubmeta/h:title">
           <p:pipe step="pubmeta" port="result"/>
         </p:input>
       </p:insert>
@@ -101,14 +106,14 @@
   </p:choose>
 
   <p:choose name="header">
-    <p:when test="/h:pubmeta/h:header">
+    <p:when test="/h:doc/h:pubmeta/h:header">
       <p:xpath-context>
         <p:pipe step="pubmeta" port="result"/>
       </p:xpath-context>
       <p:output port="result"/>
       <p:load>
         <p:with-option name="href"
-                       select="concat('../../includes/header/', /h:pubmeta/h:header, '.xml')">
+                       select="concat('../../includes/header/', /h:doc/h:pubmeta/h:header, '.xml')">
           <p:pipe step="pubmeta" port="result"/>
         </p:with-option>
       </p:load>
@@ -130,14 +135,14 @@
   </p:choose>
 
   <p:choose name="footer">
-    <p:when test="/h:pubmeta/h:footer">
+    <p:when test="/h:doc/h:pubmeta/h:footer">
       <p:xpath-context>
         <p:pipe step="pubmeta" port="result"/>
       </p:xpath-context>
       <p:output port="result"/>
       <p:load>
         <p:with-option name="href"
-                       select="concat('../../includes/footer/', /h:pubmeta/h:footer, '.xml')">
+                       select="concat('../../includes/footer/', /h:doc/h:pubmeta/h:footer, '.xml')">
           <p:pipe step="pubmeta" port="result"/>
         </p:with-option>
       </p:load>
@@ -148,40 +153,9 @@
     </p:otherwise>
   </p:choose>
 
-  <p:identity name="pubdate-template">
-    <p:input port="source">
-      <p:inline><div class="iblock" xmlns="http://www.w3.org/1999/xhtml">Published {$date}</div>
-      </p:inline>
-    </p:input>
-  </p:identity>
-
-  <p:choose name="pubdate">
-    <p:when test="/h:pubmeta/h:date">
-      <p:xpath-context>
-        <p:pipe step="pubmeta" port="result"/>
-      </p:xpath-context>
-      <p:output port="result"/>
-      <p:template>
-        <p:with-param name="date"
-                      select="format-date(xs:date(string(/h:pubmeta/h:date)),
-                                          '[D01] [MNn,*-3] [Y0001]')">
-          <p:pipe step="pubmeta" port="result"/>
-        </p:with-param>
-        <p:input port="template">
-          <p:pipe step="pubdate-template" port="result"/>
-        </p:input>
-      </p:template>
-    </p:when>
-    <p:otherwise>
-      <p:output port="result"/>
-      <p:template>
-        <p:with-param name="date" select="format-date(current-date(), '[D01] [MNn,*-3] [Y0001]')"/>
-        <p:input port="template">
-          <p:pipe step="pubdate-template" port="result"/>
-        </p:input>
-      </p:template>
-    </p:otherwise>
-  </p:choose>
+  <cx:pubdate name="pubdate">
+    <p:with-option name="baseuri" select="$markdown"/>
+  </cx:pubdate>
 
   <p:insert match="h:html" position="first-child">
     <p:input port="source">
@@ -203,12 +177,12 @@
   <p:wrap match="h:main" wrapper="body" wrapper-namespace="http://www.w3.org/1999/xhtml"/>
 
   <p:choose>
-    <p:when test="/h:pubmeta/h:id">
+    <p:when test="/h:doc/h:pubmeta/h:id">
       <p:xpath-context>
         <p:pipe step="pubmeta" port="result"/>
       </p:xpath-context>
       <p:add-attribute match="h:article" attribute-name="id">
-        <p:with-option name="attribute-value" select="/h:pubmeta/h:id">
+        <p:with-option name="attribute-value" select="/h:doc/h:pubmeta/h:id">
           <p:pipe step="pubmeta" port="result"/>
         </p:with-option>
       </p:add-attribute>
