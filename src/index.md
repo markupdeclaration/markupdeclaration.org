@@ -1,8 +1,6 @@
 <pubmeta>
 <header>main</header>
 <title>The Markup Declaration</title>
-<date>2018-08-26</date>
-<id>homepage</id>
 </pubmeta>
 
 _Markup Declaration_ is a movement for clarifying and

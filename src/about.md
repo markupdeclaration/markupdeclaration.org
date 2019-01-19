@@ -1,7 +1,3 @@
-<pubmeta>
-<date>2018-08-26</date>
-</pubmeta>
-
 # About
 
 These pages are maintained in the

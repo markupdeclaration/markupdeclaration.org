@@ -1,7 +1,3 @@
-<pubmeta>
-<date>2018-08-27</date>
-</pubmeta>
-
 # Contact
 
 Hello and welcome! We’re delighted you’re interested in joining our

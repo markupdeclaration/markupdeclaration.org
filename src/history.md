@@ -1,7 +1,3 @@
-<pubmeta>
-<date>2018-08-27</date>
-</pubmeta>
-
 # History
 
 This movement has its genesis in threads of conversation that have
