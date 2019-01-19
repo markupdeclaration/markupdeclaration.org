@@ -2,6 +2,7 @@ buildscript {
   repositories {
     mavenLocal()
     mavenCentral()
+    maven { url "https://maven.restlet.com" }
   }
 
   // Get rid of that [expletive deleted] warning about xml-apis 2.0.2/1.0.b2
@@ -23,6 +24,7 @@ buildscript {
 repositories {
   mavenLocal()
   mavenCentral()
+  maven { url "https://maven.restlet.com" }
 }
 
 // Get rid of that [expletive deleted] warning about xml-apis 2.0.2/1.0.b2
@@ -66,6 +68,31 @@ task website(dependsOn: [ 'copy_css', 'copy_img' ]) {
   }
 }
 
+task realgitlog(type: Exec) {
+  outputs.file "build/git-log-summary.xml"
+  commandLine 'tools/git-log-summary', '-o', 'build/git-log-summary.xml'
+  doFirst {
+    mkdir("build")
+  }
+}
+
+task fakegitlog() {
+  doLast {
+    def stream = new FileOutputStream(new File("build/git-log-summary.xml"))
+    def summary = new PrintStream(stream)
+    summary.println("<git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info'>")
+    summary.println("</git-repo-info>")
+    summary.close()
+  }
+  doFirst {
+    mkdir("build")
+  }
+}
+
+task gitlog() {
+  // nop
+}
+
 // ======================================================================
 
 def cwd = System.getProperty("user.dir")
@@ -73,12 +100,20 @@ if (!cwd.endsWith("/")) {
   cwd = cwd + "/"
 }
 
+// Only attempt to exec the Perl script that gets the git log on
+// systems where we're confident it will succeed.
+if ("true".equals(System.getenv("TRAVIS")) || "/Users/ndw".equals(System.getenv("HOME"))) {
+  gitlog.dependsOn realgitlog
+} else {
+  gitlog.dependsOn fakegitlog
+}
+
 fileTree(dir: "src").include("**/*.md").each { File file ->
   def relPath = file.getAbsolutePath().substring(cwd.length())
   def outPath = relPath.replace("src/", "build/").replace(".md", ".html")
   def taskName = relPath.replace("/","_")
 
-  Task t = task "$taskName"(type: XMLCalabashTask) {
+  Task t = task "$taskName"(type: XMLCalabashTask, dependsOn: ['gitlog']) {
     inputs.files fileTree(dir: "includes")
     inputs.file relPath
     option("markdown", new File(relPath).getAbsolutePath())
@@ -93,12 +128,41 @@ fileTree(dir: "src").include("**/*.html").each { File file ->
   def outPath = relPath.replace("src/", "build/").replace(".md", ".html")
   def taskName = relPath.replace("/","_")
 
-  Task t = task "$taskName"(type: XMLCalabashTask) {
+  Task t = task "$taskName"(type: XMLCalabashTask, dependsOn: ['gitlog']) {
     inputs.files fileTree(dir: "includes")
     inputs.file relPath
     input("source", new File(relPath).getAbsolutePath())
     output("result", outPath)
     pipeline "tools/xpl/html.xpl"
+  }
+  website.dependsOn taskName
+}
+
+fileTree(dir: "src").include("**/*.xml").each { File file ->
+  def relPath = file.getAbsolutePath().substring(cwd.length())
+  def outPath = relPath.replace("src/", "build/").replace(".xml", ".html")
+  def taskName = relPath.replace("/","_")
+
+  def vocabulary = null
+  def scan = new Scanner(file)
+  while (scan.hasNext()) {
+    def line = scan.nextLine().toString()
+    if (vocabulary == null && line.contains("/ns/docbook")) {
+      vocabulary = "docbook"
+    }
+  }
+
+  if (vocabulary == null) {
+    throw new GradleException("Unrecognized XML vocabulary")
+  }
+
+  Task t = task "$taskName"(type: DocBookTask, dependsOn: ['gitlog']) {
+    inputs.files fileTree(dir: "includes")
+    inputs.file relPath
+    input("source", new File(relPath).getAbsolutePath())
+    output("result", outPath)
+    option("style", new File("tools/xsl/docbook.xsl").getAbsolutePath())
+    pipeline "tools/xpl/docbook.xpl"
   }
   website.dependsOn taskName
 }
