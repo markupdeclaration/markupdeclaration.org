@@ -2,12 +2,26 @@
 
 Got something related to markup on your calendar: conference, workshop, meetup? Tell us about it!
 
+## May, 2019
+
+* [JATS-Con](https://www.eventsforce.net/wgcconferencecentre/frontend/reg/thome.csp?pageID=5088&eventID=17&traceRedir=2):
+  20–21 May, Cambridge, GB. The conference on the use of the Journal
+  Article Tag Suite (JATS) in publishing workflows. This year, the
+  theme of JATS-Con will be the changing face of journal publishing.
+
 ## June, 2019
 
 * [MarkupUK](https://markupuk.org/): 7–9 June, London, GB. A
   conference about XML and other markup technologies
 
 ### July, 2019
+
+* [Digital Humanities at Oxford Summer
+  School](http://www.oerc.ox.ac.uk/dhoxss-2019): 22–26 July, Oxford,
+  GB. DHOxSS offers a range of training workshops to anyone with an
+  interest in the Digital Humanities, including academics at all
+  career stages, students, project managers, and people who work in
+  IT, libraries, and cultural heritage.
 
 * [ACL 2019](http://www.acl2019.org/EN/): 28 July–2 August, Florence,
   IT. ACL is the premier conference of the field of computational
