@@ -59,3 +59,7 @@ Markup Declaration.
 
 If you’re interested in finding out more, [contact us](/contact),
 or [join in the conversation](https://www.mulberrytech.com/markupdeclaration.html)!
+Do you have a question about markup? We’re actively soliciting issues
+about [markup applications](https://github.com/markupdeclaration/applications/issues)
+and [markup technologies](https://github.com/markupdeclaration/technologies/issues).
+
