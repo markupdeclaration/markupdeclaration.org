@@ -39,7 +39,8 @@ preservation of information or that have open data policies –
 have as much need as ever for declarative markup.
 
 We need a central space in which to discuss, work on, and work with
-these technologies.
+these technologies. For other places to discuss markup, see our new
+[list of events](/resources/events.html)!
 
 Markup Declaration is a community espousing a philosophy of markup
 that enables platform and system independence. The community will
