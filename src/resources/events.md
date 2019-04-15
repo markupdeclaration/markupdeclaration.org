@@ -1,4 +1,4 @@
-# Upcoming conferences
+# Upcoming events
 
 Got something related to markup on your calendar: conference, workshop, meetup?
 [Tell us about it](/contact.html)!
