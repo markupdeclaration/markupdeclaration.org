@@ -12,6 +12,13 @@ Got something related to markup on your calendar: conference, workshop, meetup?
 
 ## June, 2019
 
+* [Digital Humanities Summer Institute](http://dhsi.org/):
+  3-7 and 10-14 June, Victoria, BC, CA. The Digital Humanities Summer Institute
+  provides an ideal environment for discussing and learning about new
+  computing technologies and how they are influencing teaching,
+  research, dissemination, creation, and preservation in different
+  disciplines, via a community-based approach.
+
 * [MarkupUK](https://markupuk.org/): 7–9 June, London, GB. A
   conference about XML and other markup technologies
 
@@ -23,6 +30,13 @@ Got something related to markup on your calendar: conference, workshop, meetup?
   interest in the Digital Humanities, including academics at all
   career stages, students, project managers, and people who work in
   IT, libraries, and cultural heritage.
+
+* [ACH 2019](http://ach2019.ach.org/): 23-26 July, Pittsburg, PA, US.
+  ACH is the United States-based constituent organization in the
+  Alliance for Digital Humanities Organizations (ADHO). The ACH2019
+  conference, in partnership with Keystone DH, provides a forum for
+  conversations on an expansive definition of digital humanities in a
+  broad array of subject areas, methods, and communities of practice.
 
 * [ACL 2019](http://www.acl2019.org/EN/): 28 July–2 August, Florence,
   IT. ACL is the premier conference of the field of computational
@@ -54,3 +68,15 @@ Got something related to markup on your calendar: conference, workshop, meetup?
   meeting is the gathering point for the TEI community. It offers an
   opportunity to meet with colleagues, learn about new projects, share
   research, and find out about new developments in the TEI.
+
+* [DocEng 2019]: 23-26 September, Berlin, DE. The 19th ACM Symposium
+  on Document Engineering (DocEng 2019) seeks original research papers
+  that focus on the design, implementation, development, management,
+  use and evaluation of advanced systems where document and document
+  collections play a key role. DocEng emphasizes innovative approaches
+  to document engineering technology, use of documents and document
+  collections in real-world applications, novel principles, tools and
+  processes that improve our ability to create, manage, maintain,
+  share, and productively use these. In particular, DocEng 2019 seeks
+  contributions involving in the area of cooperative work with
+  documents.
