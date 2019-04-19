@@ -1,7 +1,8 @@
 # Upcoming events
 
 Got something related to markup on your calendar: conference, workshop, meetup?
-[Tell us about it](/contact.html)!
+[Tell us about it](/contact.html)! If you know of another
+[curated list](#lists), please tell us about that as well.
 
 ## May, 2019
 
@@ -22,6 +23,11 @@ Got something related to markup on your calendar: conference, workshop, meetup?
 * [MarkupUK](https://markupuk.org/): 7–9 June, London, GB. A
   conference about XML and other markup technologies
 
+* [Computers & Writing Conference](https://candwcon.org/2019): 20–22
+  June, East Lansing, MI, US. The theme for the 2019 Computers and
+  Writing conference is _Mission Critical: Centering Ethical Challenges
+  in Computers and Writing_.
+
 ### July, 2019
 
 * [Digital Humanities at Oxford Summer
@@ -30,6 +36,15 @@ Got something related to markup on your calendar: conference, workshop, meetup?
   interest in the Digital Humanities, including academics at all
   career stages, students, project managers, and people who work in
   IT, libraries, and cultural heritage.
+
+* [The Many Hats of a Technical
+  Communicator](https://ideas.infomanagementcenter.com/): 23–24 July,
+  Online. The technical communication field continues to evolve
+  rapidly and those who work in it are faced with a growing list of
+  responsibilities that they must be prepared to handle. The 2019
+  Summer IDEAS online conference will offer a comprehensive cross
+  section of what the technical communication discipline has become
+  and is becoming.
 
 * [ACH 2019](http://ach2019.ach.org/): 23-26 July, Pittsburg, PA, US.
   ACH is the United States-based constituent organization in the
@@ -69,14 +84,21 @@ Got something related to markup on your calendar: conference, workshop, meetup?
   opportunity to meet with colleagues, learn about new projects, share
   research, and find out about new developments in the TEI.
 
-* [DocEng 2019]: 23-26 September, Berlin, DE. The 19th ACM Symposium
-  on Document Engineering (DocEng 2019) seeks original research papers
-  that focus on the design, implementation, development, management,
-  use and evaluation of advanced systems where document and document
-  collections play a key role. DocEng emphasizes innovative approaches
-  to document engineering technology, use of documents and document
-  collections in real-world applications, novel principles, tools and
-  processes that improve our ability to create, manage, maintain,
-  share, and productively use these. In particular, DocEng 2019 seeks
-  contributions involving in the area of cooperative work with
-  documents.
+* [DocEng 2019](https://doceng.org/doceng2019/index): 23-26 September,
+  Berlin, DE. The 19th ACM Symposium on Document Engineering seeks
+  original research papers that focus on the design, implementation,
+  development, management, use and evaluation of advanced systems
+  where document and document collections play a key role. DocEng
+  emphasizes innovative approaches to document engineering technology,
+  use of documents and document collections in real-world
+  applications, novel principles, tools and processes that improve our
+  ability to create, manage, maintain, share, and productively use
+  these. In particular, DocEng 2019 seeks contributions involving in
+  the area of cooperative work with documents.
+
+<a id="lists"></a>
+# Other curated lists
+
+* The XML FAQ’s [Upcoming Events](http://xml.silmaril.ie/moreinfo.html#events) page.
+* Formatting Information’s [Conferences and meetings](http://latex.silmaril.ie/formattinginformation/conf.html) page.
+
