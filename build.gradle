@@ -53,6 +53,15 @@ task copy_css(type: Copy) {
   }
 }
 
+task copy_js(type: Copy) {
+  from "js/"
+  into "build/js/"
+  doFirst {
+    mkdir("build")
+    mkdir("build/js")
+  }
+}
+
 task copy_img(type: Copy) {
   from "img/"
   into "build/img/"
@@ -62,7 +71,7 @@ task copy_img(type: Copy) {
   }
 }
 
-task website(dependsOn: [ 'copy_css', 'copy_img' ]) {
+task website(dependsOn: [ 'copy_css', 'copy_img', 'copy_js' ]) {
   doLast {
     println("Built website")
   }

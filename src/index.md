@@ -4,27 +4,28 @@
 </pubmeta>
 
 _Markup Declaration_ is a movement for clarifying and
-formalizing our understanding of declarative markup.
+formalizing our understanding of <a href="#" id="more-decl-link" class="morelink">declarative markup</a>.
 
-Declarative markup is the practice of identifying what information in
+<p id="more-decl-anchor" class="moreinfo">Declarative markup is the practice of identifying what information in
 a document is, typically separate from how it should be processed or
 presented. Declarative markup can be used to identify information
-semantically (*this* is a name, *this* is the name of a person, *this*
-is the name of a process, *this* is a step in a procedure, *this*
+semantically (<em>this</em> is a name, <em>this</em> is the name of a person, <em>this</em>
+is the name of a process, <em>this</em> is a step in a procedure, <em>this</em>
 portion of the document is related to the circulatory system), or
-structurally (*this* is a section, paragraph, list, item in a list).
+structurally (<em>this</em> is a section, paragraph, list, item in a list).</p>
 
-Advantages of using declarative markup rather than processing or
+The time is ripe to promote the
+<a href="#" id="adv-link" class="morelink">advantages of declarative markup</a>: for
+a few years, non-declarative technologies have been developed and
+over-promised and their limits have started to show.
+
+<p id="adv-anchor" class="moreinfo">Advantages of using declarative markup rather than processing or
 application specific markup include: the ability to do multiple things
 with the same information source without editing the source file; to
 have multiple presentation formats for the same content including
 visual and accessible presentations; to use the same documents in many
 different applications for different vendors; and to lengthen the time
-in which the documents are likely to be useable.
-
-The time is ripe to explain declarative markup: for a few years, 
-non-declarative technologies have been developed and over-promised and their 
-limits have started to show.
+in which the documents are likely to be useable.</p>
 
 While documents with declarative markup are often encoded in XML,
 XML vocabularies do not need to be declarative and declarative
@@ -63,4 +64,3 @@ or [join in the conversation](https://www.mulberrytech.com/markupdeclaration.htm
 Do you have a question about markup? We’re actively soliciting issues
 about [markup applications](https://github.com/markupdeclaration/applications/issues)
 and [markup technologies](https://github.com/markupdeclaration/technologies/issues).
-

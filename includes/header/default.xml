@@ -1,2 +1,10 @@
 <header xmlns="http://www.w3.org/1999/xhtml">
+  <nav class="pagenav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/contact.html">Participate</a></li>
+  </ul></nav>
+
 </header>

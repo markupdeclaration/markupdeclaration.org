@@ -1,6 +1,1 @@
-<footer xmlns="http://www.w3.org/1999/xhtml">
-  <a href="/">Home</a>
-  | <a href="/about.html">About</a>
-  | <a href="/resources/">Resources</a>
-  | <a href="/contact.html">Contact</a>
-</footer>
+<footer xmlns="http://www.w3.org/1999/xhtml" />

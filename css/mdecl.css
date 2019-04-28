@@ -2,14 +2,6 @@ body {
     background: #ffffff;
 }
 
-#mainlogo {
-    position: absolute;
-    top: 4rem;
-    left: 65%;
-    max-width: 25%;
-    max-height: 100%;
-}
-
 #smlogo {
     display: none;
 }
@@ -31,8 +23,59 @@ header a:visited {
     color: inherit;
 }
 
+nav.sidebar {
+    z-index: 10;
+    position: absolute;
+    top: 4rem;
+    left: 65%;
+    width: 35%;
+}
+
+nav.sidebar ul {
+    font-family: chainprinter, sans-serif;
+    color: #ea5b0b;
+    font-size: 2rem;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-left: 15%;
+}
+
+nav.inline {
+    display: none;
+}
+
+nav.pagenav ul {
+    font-family: chainprinter, sans-serif;
+    color: #ea5b0b;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav.pagenav li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+nav.pagenav li + li::before {
+    content: " / ";
+    color: #312783;
+}
+
+#mainlogo {
+    width: 75%;
+    max-width: 75%;
+    max-height: 100%;
+}
+
 article {
     padding-top: 1rem;
+}
+
+h1 {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
 }
 
 ol,
@@ -49,9 +92,45 @@ li p:first-child {
     padding-top: 0;
 }
 
+.moreicon {
+    vertical-align: super;
+    color: #ea5b0b;
+    font-family: sans-serif;
+    border: solid 1px #ea5b0b;
+    padding: 1px;
+    font-size: 50%;
+}
+
 @media (max-width: 760px) {
-    #mainlogo {
+    nav.sidebar {
         display: none;
+    }
+
+    nav.inline {
+        display: block;
+    }
+
+    nav.inline ul {
+        font-family: chainprinter, sans-serif;
+        color: #ea5b0b;
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.inline li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.inline li + li::before {
+        content: " / ";
+        color: #312783;
+    }
+
+    article {
+        margin-top: 0;
     }
 
     #smlogo {
@@ -64,6 +143,49 @@ li p:first-child {
     ol,
     ul {
         width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav.sidebar {
+        display: none;
+    }
+
+    nav.inline {
+        display: block;
+    }
+
+    nav.inline ul {
+        font-family: chainprinter, sans-serif;
+        color: #ea5b0b;
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav.inline li {
+        display: list-item;
+    }
+
+    nav.inline li::before,
+    nav.inline li + li::before {
+        content: "• ";
+        color: #312783;
+    }
+
+    nav.pagenav ul {
+        list-style: none;
+    }
+
+    nav.pagenav li {
+        display: list-item;
+    }
+
+    nav.pagenav li::before,
+    nav.pagenav li + li::before {
+        content: "• ";
+        color: #312783;
     }
 }
 

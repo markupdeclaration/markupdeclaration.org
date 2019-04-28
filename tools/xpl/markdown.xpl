@@ -212,4 +212,9 @@
     </p:input>
   </p:insert>
 
+  <p:xslt>
+    <p:input port="stylesheet">
+      <p:document href="../xsl/post.xsl"/>
+    </p:input>
+  </p:xslt>
 </p:declare-step>

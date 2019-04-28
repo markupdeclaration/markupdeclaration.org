@@ -1,4 +1,17 @@
 <header xmlns="http://www.w3.org/1999/xhtml">
-  <img src="img/logo.png" alt="[Logo]" id="mainlogo"/>
+  <nav class="sidebar">
+    <img src="img/logo.png" alt="[Logo]" id="mainlogo" />
+    <ul>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/contact.html">Participate</a></li>
+    </ul>
+  </nav>
   <h1><img src="img/logo-small.png" alt="[Logo]" id="smlogo"/>Markup Declaration</h1>
+  <nav class="inline">
+    <ul>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/contact.html">Participate</a></li>
+  </ul></nav>
 </header>
