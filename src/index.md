@@ -4,7 +4,7 @@
 </pubmeta>
 
 _Markup Declaration_ is a movement for clarifying and
-formalizing our understanding of <a href="#" id="more-decl-link" class="morelink">declarative markup</a>.
+formalizing our understanding of <span id="more-decl-link" class="morelink">declarative markup</span>.
 
 <p id="more-decl-anchor" class="moreinfo">Declarative markup is the practice of identifying what information in
 a document is, typically separate from how it should be processed or
@@ -15,7 +15,7 @@ portion of the document is related to the circulatory system), or
 structurally (<em>this</em> is a section, paragraph, list, item in a list).</p>
 
 The time is ripe to promote the
-<a href="#" id="adv-link" class="morelink">advantages of declarative markup</a>: for
+<span id="adv-link" class="morelink">advantages of declarative markup</span>: for
 a few years, non-declarative technologies have been developed and
 over-promised and their limits have started to show.
 
