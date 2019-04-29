@@ -59,7 +59,7 @@ nav.pagenav li {
 }
 
 nav.pagenav li + li::before {
-    content: " / ";
+    content: "/ ";
     color: #312783;
 }
 
@@ -170,20 +170,6 @@ li p:first-child {
 
     nav.inline li::before,
     nav.inline li + li::before {
-        content: "• ";
-        color: #312783;
-    }
-
-    nav.pagenav ul {
-        list-style: none;
-    }
-
-    nav.pagenav li {
-        display: list-item;
-    }
-
-    nav.pagenav li::before,
-    nav.pagenav li + li::before {
         content: "• ";
         color: #312783;
     }

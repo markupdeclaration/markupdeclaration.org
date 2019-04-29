@@ -125,6 +125,8 @@ fileTree(dir: "src").include("**/*.md").each { File file ->
   Task t = task "$taskName"(type: XMLCalabashTask, dependsOn: ['gitlog']) {
     inputs.files fileTree(dir: "includes")
     inputs.file relPath
+    inputs.file "tools/xsl/post.xsl"
+    inputs.file "tools/xsl/pubdate.xsl"
     option("markdown", new File(relPath).getAbsolutePath())
     output("result", outPath)
     pipeline "tools/xpl/markdown.xpl"

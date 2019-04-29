@@ -118,11 +118,49 @@
   <p:rename match="h:header[@class='article-titlepage']/h:h2" new-name="h1"
             new-namespace="http://www.w3.org/1999/xhtml"/>
 
-  <p:insert match="h:header[@class='article-titlepage']/h:h1" position="first-child">
+  <!-- I am not convinced that the next three steps are the most efficient solution -->
+
+  <p:insert name="logo-link"
+            match="h:header[@class='article-titlepage']/h:h1" position="first-child">
     <p:input port="insertion" xmlns="http://www.w3.org/1999/xhtml">
       <p:inline><a href="/"><img src="/img/logo-small.png" alt="[Logo]"/></a> </p:inline>
     </p:input>
   </p:insert>
+
+  <p:choose name="header">
+    <p:when test="/h:doc/h:pubmeta/h:header">
+      <p:xpath-context>
+        <p:pipe step="pubmeta" port="result"/>
+      </p:xpath-context>
+      <p:output port="result"/>
+      <p:load>
+        <p:with-option name="href"
+                       select="concat('../../includes/header/', /h:doc/h:pubmeta/h:header, '.xml')">
+          <p:pipe step="pubmeta" port="result"/>
+        </p:with-option>
+      </p:load>
+    </p:when>
+    <p:otherwise>
+      <p:output port="result"/>
+      <p:load href="../../includes/header/default.xml"/>
+      <p:insert match="h:header" position="first-child">
+        <p:input port="insertion" select="(//h:h1)[1]">
+          <p:pipe step="logo-link" port="result"/>
+        </p:input>
+      </p:insert>
+    </p:otherwise>
+  </p:choose>
+
+  <p:viewport match="h:header[@class='article-titlepage']">
+    <p:viewport-source>
+      <p:pipe step="logo-link" port="result"/>
+    </p:viewport-source>
+    <p:identity>
+      <p:input port="source">
+        <p:pipe step="header" port="result"/>
+      </p:input>
+    </p:identity>
+  </p:viewport>
 
   <p:insert match="h:main" position="last-child">
     <p:input port="insertion">
@@ -135,5 +173,4 @@
       <p:pipe step="pubdate" port="result"/>
     </p:input>
   </p:insert>
-
 </p:declare-step>
