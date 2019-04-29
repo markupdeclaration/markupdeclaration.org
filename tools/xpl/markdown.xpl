@@ -121,7 +121,7 @@
     <p:otherwise>
       <p:output port="result"/>
       <p:load href="../../includes/header/default.xml"/>
-      <p:insert match="h:header" position="last-child">
+      <p:insert match="h:header" position="first-child">
         <p:input port="insertion" select="(//h:h1)[1]">
           <p:pipe step="content" port="result"/>
         </p:input>
@@ -210,6 +210,12 @@
     <p:input port="insertion">
       <p:pipe step="pubdate" port="result"/>
     </p:input>
+    <p:log port="result" href="/tmp/last.xml"/>
   </p:insert>
 
+  <p:xslt>
+    <p:input port="stylesheet">
+      <p:document href="../xsl/post.xsl"/>
+    </p:input>
+  </p:xslt>
 </p:declare-step>

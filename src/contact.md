@@ -1,4 +1,4 @@
-# Contact
+# Participate
 
 Hello and welcome! We’re delighted you’re interested in joining our
 community!

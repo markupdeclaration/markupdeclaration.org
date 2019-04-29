@@ -63,7 +63,7 @@
     <p:otherwise>
       <p:output port="result"/>
       <p:load href="../../includes/header/default.xml"/>
-      <p:insert match="h:header" position="last-child">
+      <p:insert match="h:header" position="first-child">
         <p:input port="insertion" select="(//h:h1)[1]">
           <p:pipe step="content" port="result"/>
         </p:input>
