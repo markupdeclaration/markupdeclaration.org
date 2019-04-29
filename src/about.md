@@ -10,5 +10,5 @@ open
 
 If you wish to propose changes, please make a
 [pull request](https://help.github.com/articles/about-pull-requests/)
-and ask for approval from the
+which will be reviewed by the
 [editorial board](https://github.com/markupdeclaration/markupdeclaration.org/wiki/Editors).

@@ -39,15 +39,11 @@ Linguistics – indeed, all areas requiring the reuse or long term
 preservation of information or that have open data policies –
 have as much need as ever for declarative markup.
 
-We need a central space in which to discuss, work on, and work with
-these technologies. For other places to discuss markup, see our new
-[list of events](/resources/events.html)!
-
-Markup Declaration is a community espousing a philosophy of markup
-that enables platform and system independence. The community will
-offer training and instructional materials, a collaborative
-infrastructure for developing code, and a coherent,
-community-generated best-practice document for markup practitioners.
+We provide a central space in which to discuss, work on, and work with
+these technologies. Our goal is to offer comprehensive training and
+instructional materials, a collaborative infrastructure for developing
+code, and a coherent, community-generated best-practice document for
+markup practitioners.
 
 Your contribution is central to realising this vision. Whether you’re
 a markup veteran, or just starting to find out what markup has to
@@ -61,6 +57,8 @@ Markup Declaration.
 
 If you’re interested in finding out more, [contact us](/contact),
 or [join in the conversation](https://www.mulberrytech.com/markupdeclaration.html)!
-Do you have a question about markup? We’re actively soliciting issues
+Do you have a question about markup? We’re actively soliciting proposals
 about [markup applications](https://github.com/markupdeclaration/applications/issues)
 and [markup technologies](https://github.com/markupdeclaration/technologies/issues).
+For other places to discuss markup, see our new
+[list of events](/resources/events.html) page!
