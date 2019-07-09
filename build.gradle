@@ -16,8 +16,8 @@ buildscript {
     classpath group: 'org.docbook', name: 'docbook-xslt2', version: '2.3.9'
     classpath group: 'org.docbook', name: 'docbook-schemas', version: '5.1-1'
     classpath group: 'com.xmlcalabash', name: 'xmlcalabash1-gradle', version: '1.3.5'
-    classpath group: 'com.xmlcalabash', name: 'xmlcalabash', version: '1.1.24-98'
-    classpath group: 'org.xmlresolver', name: 'xmlresolver', version: '0.13.2'
+    classpath group: 'com.xmlcalabash', name: 'xmlcalabash', version: '1.1.27-99'
+    classpath group: 'org.xmlresolver', name: 'xmlresolver', version: '1.0.1'
   }
 }
 
@@ -117,8 +117,8 @@ if ("true".equals(System.getenv("TRAVIS")) || "/Users/ndw".equals(System.getenv(
   gitlog.dependsOn fakegitlog
 }
 
-fileTree(dir: "src").include("**/*.md").each { File file ->
-  def relPath = file.getAbsolutePath().substring(cwd.length())
+fileTree(dir: "src").include("**/*.md").each { File mdfile ->
+  def relPath = mdfile.getAbsolutePath().substring(cwd.length())
   def outPath = relPath.replace("src/", "build/").replace(".md", ".html")
   def taskName = relPath.replace("/","_")
 
@@ -127,35 +127,35 @@ fileTree(dir: "src").include("**/*.md").each { File file ->
     inputs.file relPath
     inputs.file "tools/xsl/post.xsl"
     inputs.file "tools/xsl/pubdate.xsl"
-    option("markdown", new File(relPath).getAbsolutePath())
-    output("result", outPath)
+    option("markdown", file(relPath))
+    output("result", file(outPath))
     pipeline "tools/xpl/markdown.xpl"
   }
   website.dependsOn taskName
 }
 
-fileTree(dir: "src").include("**/*.html").each { File file ->
-  def relPath = file.getAbsolutePath().substring(cwd.length())
+fileTree(dir: "src").include("**/*.html").each { File hfile ->
+  def relPath = hfile.getAbsolutePath().substring(cwd.length())
   def outPath = relPath.replace("src/", "build/").replace(".md", ".html")
   def taskName = relPath.replace("/","_")
 
   Task t = task "$taskName"(type: XMLCalabashTask, dependsOn: ['gitlog']) {
     inputs.files fileTree(dir: "includes")
     inputs.file relPath
-    input("source", new File(relPath).getAbsolutePath())
-    output("result", outPath)
+    input("source", file(relPath))
+    output("result", file(outPath))
     pipeline "tools/xpl/html.xpl"
   }
   website.dependsOn taskName
 }
 
-fileTree(dir: "src").include("**/*.xml").each { File file ->
-  def relPath = file.getAbsolutePath().substring(cwd.length())
+fileTree(dir: "src").include("**/*.xml").each { File xfile ->
+  def relPath = xfile.getAbsolutePath().substring(cwd.length())
   def outPath = relPath.replace("src/", "build/").replace(".xml", ".html")
   def taskName = relPath.replace("/","_")
 
   def vocabulary = null
-  def scan = new Scanner(file)
+  def scan = new Scanner(xfile)
   while (scan.hasNext()) {
     def line = scan.nextLine().toString()
     if (vocabulary == null && line.contains("/ns/docbook")) {
@@ -170,9 +170,9 @@ fileTree(dir: "src").include("**/*.xml").each { File file ->
   Task t = task "$taskName"(type: DocBookTask, dependsOn: ['gitlog']) {
     inputs.files fileTree(dir: "includes")
     inputs.file relPath
-    input("source", new File(relPath).getAbsolutePath())
-    output("result", outPath)
-    option("style", new File("tools/xsl/docbook.xsl").getAbsolutePath())
+    input("source", file(relPath))
+    output("result", file(outPath))
+    option("style", file("tools/xsl/docbook.xsl"))
     pipeline "tools/xpl/docbook.xpl"
   }
   website.dependsOn taskName
