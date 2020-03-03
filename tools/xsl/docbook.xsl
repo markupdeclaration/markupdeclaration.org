@@ -7,7 +7,7 @@
                 exclude-result-prefixes="db xlink xs"
                 version="2.0">
 
-<xsl:import href="https://cdn.docbook.org/release/latest/xslt/base/html/final-pass.xsl"/>
+<xsl:import href="https://cdn.docbook.org/release/xsl20/current/xslt/base/html/final-pass.xsl"/>
 
 <xsl:template match="db:not-really-an-element"/>
 

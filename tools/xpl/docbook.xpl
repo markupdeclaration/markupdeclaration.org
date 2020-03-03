@@ -16,7 +16,7 @@
 
   <p:option name="style" required="true"/>
 
-  <p:import href="https://cdn.docbook.org/release/latest/xslt/base/pipelines/docbook.xpl"/>
+  <p:import href="https://cdn.docbook.org/release/xsl20/current/xslt/base/pipelines/docbook.xpl"/>
   <p:import href="pubdate.xpl"/>
 
   <p:insert name="pubmeta" match="/h:doc" position="first-child">
